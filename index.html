@@ -15,8 +15,8 @@
 	</head>
 	<body ng-controller="WordsToNumber">
 		<div class="container">
-			<div class="content title large">Numerology - Word Converter</div>
-			<div class="content">
+			<div class="content title large" ng-click="numerologyCollapse = !numerologyCollapse">Numerology - Word Converter</div>
+			<div class="content" ng-show="!numerologyCollapse">
 				<p>Wikipedia, the source of all knowledge, can describe <a href="http://en.wikipedia.org/wiki/Numerology">numerology</a> 
 					much better than I can. This is a fun tool to convert words to their corresponding digital root 
 					(single-digit summation). For example, you happen to be supersmart. The word "supersmart" has digital 
@@ -35,8 +35,8 @@
 				<strong>Calculation: </strong><span ng-bind="caculation"></span>
 			</div>
 			
-			<div class="content title">Character Values:</div>
-			<div class="content">
+			<div class="content title" ng-click="charValueCollapse = !charValueCollapse">Character Values:</div>
+			<div class="content" ng-show="!charValueCollapse">
 				<table id="valueChart">
 					<tr ng-repeat="row in valueChartRows">
 						<td ng-repeat="value in row"><span ng-bind="value"></span></td>
@@ -44,8 +44,8 @@
 				</table>
 			</div>
 
-			<div class="content title">Saved Results:</div>
-			<div class="content">
+			<div class="content title" ng-click="savedCollapse = !savedCollapse">Saved Results:</div>
+			<div class="content" ng-show="!savedCollapse">
 				<div ng-repeat="record in savedConversions">
 					<strong ng-bind="record.word"></strong> = <span ng-bind="record.number"></span>
 				</div>
