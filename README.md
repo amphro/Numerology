@@ -1,6 +1,6 @@
 # Numerology - Word Converter
 
-A basic numerology word converter. 
+A basic numerology word converter. Check out the demo at [http://www.thomasdvornik.com/numbers/](http://www.thomasdvornik.com/numbers/).
 
 ## Features
 
